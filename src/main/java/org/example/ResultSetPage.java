@@ -1,17 +1,18 @@
-package org.example.pagesPojo;
+package org.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ResultSetPage {
     private WebDriver driver;
-    private By resultHeader = By.name("GmE3X");;
+    public static final By RESULT_HEADER = new By.ByXPath("//div[@class='LnbJhc']//h3[@class='GmE3X']");
 
     public ResultSetPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public String getResultHeader() {
-        return resultHeader.;
+        return driver.findElement(RESULT_HEADER).getText();
     }
 }
