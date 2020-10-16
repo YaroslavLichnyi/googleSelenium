@@ -8,7 +8,7 @@ public class SearchPage {
     public final static By INPUT = By.name("q");
 
     public void open(){
-
+        driver.get("https://www.google.com/");
     }
 
     public SearchPage(WebDriver driver) {
