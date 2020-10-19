@@ -15,6 +15,6 @@ public class AppTest extends WebDriverSettings{
         searchPage.search(QUEUE);
         ResultSetPage resultSetPage = searchPage.submit();
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ResultSetPage.RESULT_HEADER));
-        Assert.assertEquals("Картинки по запросу cats", resultSetPage.getResultHeader());
+        Assert.assertTrue( resultSetPage.getResultHeader().contains(QUEUE));
     }
 }
